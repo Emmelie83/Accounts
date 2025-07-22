@@ -1,2 +1,14 @@
-package com.emmeliejohansson.accounts.dto;public class ResponseDto {
+package com.emmeliejohansson.accounts.dto;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+
+@Data
+@AllArgsConstructor
+public class ResponseDto {
+
+    private String statusCode;
+
+    private String statusMsg;
+
 }
