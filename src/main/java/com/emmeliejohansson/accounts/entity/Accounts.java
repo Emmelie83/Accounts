@@ -2,15 +2,14 @@ package com.emmeliejohansson.accounts.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
+import org.springframework.data.annotation.CreatedBy;
+import org.springframework.data.annotation.CreatedDate;
 
+import java.time.LocalDateTime;
 
 @Entity
-@Getter
-@Setter
-@ToString
-@AllArgsConstructor
-@NoArgsConstructor
-public class Accounts extends  BaseEntity {
+@Getter @Setter @ToString @AllArgsConstructor @NoArgsConstructor
+public class Accounts extends BaseEntity {
 
     @Column(name="customer_id")
     private Long customerId;
@@ -24,5 +23,14 @@ public class Accounts extends  BaseEntity {
 
     @Column(name="branch_address")
     private String branchAddress;
+
+    @CreatedDate
+    @Column(updatable = false)
+    private LocalDateTime createdAt;
+
+    @CreatedBy
+    @Column(updatable = false)
+    private String createdBy;
+
 
 }

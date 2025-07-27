@@ -2,13 +2,13 @@ package com.emmeliejohansson.accounts.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
+import org.springframework.data.annotation.CreatedBy;
+import org.springframework.data.annotation.CreatedDate;
+
+import java.time.LocalDateTime;
 
 @Entity
-@Getter
-@Setter
-@ToString
-@AllArgsConstructor
-@NoArgsConstructor
+@Getter @Setter @ToString @AllArgsConstructor @NoArgsConstructor
 public class Customer extends  BaseEntity {
 
     @Id
@@ -22,5 +22,13 @@ public class Customer extends  BaseEntity {
 
     @Column(name="mobile_number")
     private String mobileNumber;
+
+    @CreatedDate
+    @Column(updatable = false)
+    private LocalDateTime createdAt;
+
+    @CreatedBy
+    @Column(updatable = false)
+    private String createdBy;
 
 }
