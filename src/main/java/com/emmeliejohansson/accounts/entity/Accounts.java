@@ -9,7 +9,7 @@ import java.time.LocalDateTime;
 
 @Entity
 @Getter @Setter @ToString @AllArgsConstructor @NoArgsConstructor
-public class Accounts extends BaseEntity {
+public class Accounts extends  BaseEntity {
 
     @Column(name="customer_id")
     private Long customerId;
@@ -23,14 +23,5 @@ public class Accounts extends BaseEntity {
 
     @Column(name="branch_address")
     private String branchAddress;
-
-    @CreatedDate
-    @Column(updatable = false)
-    private LocalDateTime createdAt;
-
-    @CreatedBy
-    @Column(updatable = false)
-    private String createdBy;
-
 
 }
