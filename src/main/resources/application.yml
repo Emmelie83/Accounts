@@ -29,8 +29,8 @@ build:
 accounts:
   message: "Welcome to EmiBank accounts related local APIs "
   contactDetails:
-    name: "John Doe - Developer"
-    email: "john@emibank.com"
+    name: "Emmelie Johansson - Developer"
+    email: "emmelie@emibank.com"
   onCallSupport:
     - (555) 555-1234
     - (555) 523-1345
